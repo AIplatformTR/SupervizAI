@@ -3,6 +3,10 @@ import openai
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters
 
+print(f"TELEGRAM_TOKEN is: {TELEGRAM_TOKEN}")
+if not TELEGRAM_TOKEN:
+    raise ValueError("TELEGRAM_TOKEN is not set")
+
 openai.api_key = os.getenv("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")
 TELEGRAM_TOKEN = os.getenv("8103587222:AAFDybWP4EWJ1SxEx8RvKpxqFQXODZKCxy4")
 
